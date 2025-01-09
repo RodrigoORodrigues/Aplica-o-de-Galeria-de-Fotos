@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Fotos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <h1>Galeria de Fotos</h1>
+    </header>
+
+    <!-- Barra de Pesquisa -->
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Pesquise por nome de foto..." oninput="filterGallery()">
+        <button onclick="filterGallery()"> Buscar</button>
+    </div>
+    
+    <!-- Mensagem de Nenhuma Foto Encontrada -->
+    <div id="noResultsMessage" class="no-results" style="display: none;">
+        Nenhuma foto encontrada.
+    </div>
+
+    <!-- Área de Exibição das Fotos -->
+    <div id="gallery" class="gallery">
+        <div class="photo-item" data-name="Foto 1">
+            <img src="photos/Foto 1.jpg" alt="Foto 1">
+            <p>Foto 1</p>
+        </div>
+        <div class="photo-item" data-name="Foto 2">
+            <img src="photos/Foto 2.jpg" alt="Foto 2">
+            <p>Foto 2</p>
+        </div>
+        <div class="photo-item" data-name="Foto 3">
+            <img src="photos/Foto 3.jpg" alt="Foto 3">
+            <p>Foto 3</p>
+        </div>
+        <div class="photo-item" data-name="Foto 4">
+            <img src="photos/Foto 4.jpg" alt="Foto 4">
+            <p>Foto 4</p>
+        </div>
+        <div class="photo-item" data-name="Foto 5">
+            <img src="photos/Foto 5.jpg" alt="Foto 5">
+            <p>Foto 5</p>
+        </div>
+        <div class="photo-item" data-name="Foto 6">
+            <img src="photos/Foto 6.jpg" alt="Foto 6">
+            <p>Foto 6</p>
+        </div>
+        <div class="photo-item" data-name="Foto 7">
+            <img src="photos/Foto 7.png" alt="Foto 7">
+            <p>Foto 7</p>
+        </div>
+        <div class="photo-item" data-name="Foto 8">
+            <img src="photos/Foto 8.jpg" alt="Foto 8">
+            <p>Foto 8</p>
+        </div>
+        <div class="photo-item" data-name="Foto 9">
+            <img src="photos/Foto 9.jpg" alt="Foto 9">
+            <p>Foto 9</p>
+        </div>
+        <div class="photo-item" data-name="Foto 10">
+            <img src="photos/Foto 10.png" alt="Foto 10">
+            <p>Foto 10</p>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>© 2024 Galeria de Fotos. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

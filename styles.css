@@ -1,0 +1,162 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #8c3cce;
+    color: rgb(228, 202, 238);
+    text-align: center;
+    padding: 20px;
+    flex-shrink: 0;
+}
+
+/* Barra de pesquisa */
+.search-bar {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.search-bar input {
+    padding: 10px;
+    width: 80%;
+    max-width: 400px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.search-bar button {
+    padding: 10px;
+    background-color: #490d97;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #555;
+}
+
+.search-bar button img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Mensagem de Nenhuma Foto Encontrada */
+.no-results {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #333;
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+/* Estilos para a galeria */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 20px;
+    justify-content: center;
+}
+
+/* Estilos para os itens da galeria */
+.photo-item {
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.photo-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.photo-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.photo-item:hover img {
+    transform: scale(1.1);
+}
+
+.photo-item p {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    background-color: #8c3cce;
+    color: white;
+    padding: 10px 0;
+    margin-top: auto;
+    width: 100%;
+}
+
+/* Responsividade: Ajustando os itens da galeria e outros elementos para telas menores */
+@media screen and (max-width: 768px) {
+    /* Ajuste da barra de pesquisa */
+    .search-bar input {
+        width: 90%;
+    }
+
+    .search-bar button {
+        padding: 8px;
+    }
+
+    /* Reduzindo o número de colunas para dispositivos menores */
+    .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
+
+    /* Ajustando o tamanho das imagens */
+    .photo-item img {
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Ajustando o tamanho da fonte no cabeçalho */
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    /* Ajuste na barra de pesquisa para telas pequenas */
+    .search-bar input {
+        width: 100%;
+    }
+
+    /* Ajustando o layout das imagens para telas muito pequenas */
+    .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+    /* Ajustando o tamanho das imagens */
+    .photo-item img {
+        height: 120px;
+    }
+
+    /* Ajuste da fonte no rodapé */
+    footer p {
+        font-size: 0.8rem;
+    }
+}
